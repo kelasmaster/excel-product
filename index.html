@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product h2 {
+            margin-top: 15px;
+            color: #2c3e50;
+        }
+        .price {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Product Collection</h1>
+        <p>Discover our latest gadgets and tech accessories</p>
+    </header>
+
+    <div class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="earbuds.jpg" alt="Wireless Earbuds">
+            <h2>Wireless Earbuds</h2>
+            <div class="price">$59.99</div>
+            <p>Premium sound quality with 20-hour battery life and noise cancellation.</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="smartwatch.jpg" alt="Smart Watch Pro">
+            <h2>Smart Watch Pro</h2>
+            <div class="price">$199</div>
+            <p>Track your fitness, receive notifications, and make payments on your wrist.</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="speaker.jpg" alt="Portable Bluetooth Speaker">
+            <h2>Portable Bluetooth Speaker</h2>
+            <div class="price">$89.50</div>
+            <p>Waterproof speaker with 15-hour playtime and deep bass.</p>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="charger.jpg" alt="USB-C Fast Charger">
+            <h2>USB-C Fast Charger</h2>
+            <div class="price">$24.99</div>
+            <p>65W PD fast charging for all your devices.</p>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="keyboard.jpg" alt="Ergonomic Keyboard">
+            <h2>Ergonomic Keyboard</h2>
+            <div class="price">$75</div>
+            <p>Comfortable typing experience with mechanical switches.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Tech Products Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
