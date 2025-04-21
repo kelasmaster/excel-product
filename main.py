@@ -76,7 +76,7 @@ html_footer = """</div>
 </body>
 </html>"""
 
-with open('products.csv', 'r') as csv_file:
+with open('produk.csv', 'r') as csv_file:
     csv_reader = csv.DictReader(csv_file)
     products_html = ""
     
