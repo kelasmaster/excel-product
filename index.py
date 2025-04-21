@@ -1,6 +1,9 @@
 import csv
+import os
+from datetime import datetime
 
-html_header = """<!DOCTYPE html>
+def generate_html():
+    """<!DOCTYPE html>
 <html>
 <head>
     <title>Product Blog</title>
@@ -69,27 +72,19 @@ html_header = """<!DOCTYPE html>
     </header>
     <div class="products">"""
 
-html_footer = """</div>
-    <footer>
-        <p>&copy; 2023 Tech Products Blog</p>
-    </footer>
-</body>
-</html>"""
+html_footer = """
 
-with open('produk.csv', 'r') as csv_file:
-    csv_reader = csv.DictReader(csv_file)
-    products_html = ""
-    
-    for row in csv_reader:
-        products_html += f"""
-        <div class="product">
-            <img src="{row['Image']}" alt="{row['Title']}">
-            <h2>{row['Title']}</h2>
-            <div class="price">{row['Price']}</div>
-            <p>{row['Description']}</p>
-        </div>"""
-    
-    full_html = html_header + products_html + html_footer
-    
     with open('index.html', 'w') as html_file:
         html_file.write(full_html)
+    
+    print("HTML generated successfully!")
+
+def git_commit_push():
+    os.system('git add .')
+    os.system(f'git commit -m "Auto-update {datetime.now().strftime("%Y-%m-%d %H:%M")}"')
+    os.system('git push origin main')
+    print("Changes pushed to GitHub!")
+
+if __name__ == "__main__":
+    generate_html()
+    git_commit_push()
