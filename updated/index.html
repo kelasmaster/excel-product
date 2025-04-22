@@ -497,15 +497,21 @@
             guidePage.style.display = 'none';
             contactPage.style.display = 'none';
             
+            navLinks.forEach(link => link.classList.remove('active'));
+            
             if (page === 'home') {
                 homePage.style.display = 'block';
+                document.querySelector('.nav-link[data-page="home"]').classList.add('active');
             } else if (page === 'guide') {
                 guidePage.style.display = 'block';
+                document.querySelector('.nav-link[data-page="guide"]').classList.add('active');
             } else if (page === 'contact') {
                 contactPage.style.display = 'block';
+                document.querySelector('.nav-link[data-page="contact"]').classList.add('active');
             }
         }
-          // Load products from CSV
+        
+        // Load products from CSV
         function loadProducts() {
             fetch('products/produk.csv')
                 .then(response => response.text())
